@@ -1,27 +1,53 @@
-# NgxPickr
+<h1 align="center">Welcome to ngx-pickr 👋</h1>
+<p>
+  <img src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/yharaskrik/ngx-pickr#readme">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/yharaskrik/ngx-pickr/graphs/commit-activity">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/yharaskrik/ngx-pickr/blob/master/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
+  </a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+> Angular Wrapper for the color picker package, Pickr.
 
-## Development server
+### 🏠 [Homepage](https://github.com/yharaskrik/ngx-pickr)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Install
 
-## Code scaffolding
+```sh
+yarn install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Usage
 
-## Build
+```sh
+yarn start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Run tests
 
-## Running unit tests
+```sh
+yarn test
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Author
 
-## Running end-to-end tests
+👤 **Jay Bell**
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Github: [@yharaskrik](https://github.com/yharaskrik)
 
-## Further help
+## Show your support
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2019 [Jay Bell](https://github.com/yharaskrik).<br />
+This project is [MIT](https://github.com/yharaskrik/ngx-pickr/blob/master/LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

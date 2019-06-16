@@ -1,9 +1,17 @@
 {
   "name": "ngx-pickr",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Angular Wrapper for the color picker package, Pickr.",
+  "homepage": "https://github.com/yharaskrik/ngx-pickr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yharaskrik/ngx-pickr"
+  },
+  "author": "Jay Bell",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --project=ngx-pickr-test",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
