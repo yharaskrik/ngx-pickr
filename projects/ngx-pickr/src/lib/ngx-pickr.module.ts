@@ -1,11 +1,10 @@
 import {NgModule} from '@angular/core';
-import {NgxPickrComponent} from './ngx-pickr.component';
 import {NgxPickrDirective} from './ngx-pickr.directive';
 
 @NgModule({
-  declarations: [NgxPickrComponent, NgxPickrDirective],
+  declarations: [NgxPickrDirective],
   imports: [],
-  exports: [NgxPickrComponent, NgxPickrDirective]
+  exports: [NgxPickrDirective]
 })
 export class NgxPickrModule {
 }

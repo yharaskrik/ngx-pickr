@@ -16,6 +16,8 @@
 
 ### 🏠 [Homepage](https://github.com/yharaskrik/ngx-pickr)
 
+This is an Angular wrapper around the package [Pickr](https://github.com/Simonwep/pickr). This repository is just a rough implementation and will be worked on to make sure the documentation and implementation are available.
+
 ## Install
 
 ```sh
