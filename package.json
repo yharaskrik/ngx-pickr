@@ -42,7 +42,6 @@
     "@angular/platform-browser-dynamic": "~7.2.15",
     "@angular/router": "~7.2.15",
     "@simonwep/pickr": "^1.0.0-beta",
-    "ngx-pickr": "./dist/ngx-pickr/ngx-pickr-0.0.1.tgz",
     "rxjs": "~6.4.0",
     "semantic-release": "^15.13.16",
     "tslib": "^1.9.0",
