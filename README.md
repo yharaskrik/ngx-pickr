@@ -18,6 +18,8 @@
 
 This is an Angular wrapper around the package [Pickr](https://github.com/Simonwep/pickr). This repository is just a rough implementation and will be worked on to make sure the documentation and implementation are available.
 
+### [Documentation](https://ngx-pickr.firebaseapp.com/index.html)
+
 ## Install
 
 ```sh

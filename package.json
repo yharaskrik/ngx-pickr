@@ -29,7 +29,8 @@
     "copy-license": "copy ./LICENSE ./dist/ngx-pickr",
     "copy-readme": "copy ./README.md ./dist/ngx-pickr",
     "copy-files": "yarn copy-license && yarn copy-readme",
-    "compodoc": "npx compodoc -p projects/ngx-pickr/tsconfig.lib.json"
+    "compodoc": "npx compodoc -p projects/ngx-pickr/tsconfig.lib.json",
+    "firebase-deploy": "firebase deploy"
   },
   "private": true,
   "dependencies": {
@@ -59,6 +60,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "copy": "^0.3.2",
+    "firebase-tools": "^7.0.0",
     "husky": "^2.4.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",

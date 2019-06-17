@@ -35,3 +35,4 @@ jobs:
 
       - run: yarn build_ci
       - run: yarn compodoc
+      - run: yarn firebase-deploy
