@@ -23,7 +23,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build_lib": "ng build ngx-pickr",
-    "build_ci": "ng build ngx-pickr --prod",
+    "build_ci": "ng build ngx-pickr",
     "npm_pack": "cd dist/ngx-pickr && npm pack",
     "package": "yarn build_lib && yarn copy-files && yarn npm_pack",
     "copy-license": "copy ./LICENSE ./dist/ngx-pickr",
