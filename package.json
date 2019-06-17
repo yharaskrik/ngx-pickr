@@ -44,6 +44,7 @@
     "@simonwep/pickr": "^1.0.0-beta",
     "ngx-pickr": "./dist/ngx-pickr/ngx-pickr-0.0.1.tgz",
     "rxjs": "~6.4.0",
+    "semantic-release": "^15.13.16",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },
@@ -53,9 +54,9 @@
     "@angular/cli": "7.3.9",
     "@angular/compiler-cli": "~7.2.15",
     "@angular/language-service": "~7.2.15",
+    "@compodoc/compodoc": "^1.1.9",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
-    "@compodoc/compodoc": "^1.1.9",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
     "copy": "^0.3.2",
