@@ -1,8 +1,10 @@
-import {PickrConfig} from './pickr-config';
+import Pickr from '@simonwep/pickr';
 
-export const themes: { [key: string]: PickrConfig } = {
+export const themes: { [key: string]: Pickr.Options } = {
   classic:
     {
+      el: undefined,
+      theme: 'classic',
       swatches: [
         'rgba(244, 67, 54, 1)',
         'rgba(233, 30, 99, 0.95)',
@@ -43,6 +45,8 @@ export const themes: { [key: string]: PickrConfig } = {
     },
   monolith:
     {
+      el: undefined,
+      theme: 'monolith',
       swatches: [
         'rgba(244, 67, 54, 1)',
         'rgba(233, 30, 99, 0.95)',
@@ -71,6 +75,8 @@ export const themes: { [key: string]: PickrConfig } = {
     },
   nano:
     {
+      el: undefined,
+      theme: 'nano',
       swatches: [
         'rgba(244, 67, 54, 1)',
         'rgba(233, 30, 99, 0.95)',

@@ -11,10 +11,8 @@ import {
   SimpleChanges
 } from '@angular/core';
 
-import Pickr from 'node_modules/@simonwep/pickr/dist/pickr.min';
+import Pickr from '@simonwep/pickr';
 import {DOCUMENT} from '@angular/common';
-import {PickrInstance} from './types/pickr-instance';
-import {HsvaColorObject} from './types/hsva-color-object';
 import {themes} from './types/pickr-themes';
 
 @Directive({
@@ -22,19 +20,18 @@ import {themes} from './types/pickr-themes';
 })
 export class NgxPickrDirective implements AfterViewInit, OnChanges {
 
-  private pickr: PickrInstance;
-
   private container;
-
-  @Input() config = themes.classic;
-
-  @Output() readonly init = new EventEmitter<PickrInstance>();
-
-  @Output() readonly save = new EventEmitter<HsvaColorObject>();
-
-  @Output() readonly change = new EventEmitter<HsvaColorObject>();
-
-  @Output() readonly swatchSelect = new EventEmitter<HsvaColorObject>();
+  @Input() theme: Pickr.Theme = 'classic';
+  @Output() readonly init = new EventEmitter<Pickr>();
+  @Output() readonly save = new EventEmitter<Pickr.HSVaColor>();
+  @Output() readonly change = new EventEmitter<Pickr.HSVaColor>();
+  @Output() readonly swatchSelect = new EventEmitter<Pickr.HSVaColor>();
+  @Output() readonly hide = new EventEmitter<Pickr>();
+  @Output() readonly show = new EventEmitter<Pickr>();
+  @Output() readonly clear = new EventEmitter<Pickr>();
+  @Output() readonly changeStop = new EventEmitter<Pickr>();
+  @Output() readonly cancel = new EventEmitter<Pickr>();
+  private pickr: Pickr;
 
   constructor(private el: ElementRef,
               @Inject(DOCUMENT) private document: any,
@@ -65,20 +62,28 @@ export class NgxPickrDirective implements AfterViewInit, OnChanges {
     }
 
     this.pickr = Pickr.create({
-      el: this.container,
-      theme: this.config.theme || 'classic',
-      default: this.config.default || 'E91E63',
-      ...this.config
+      ...themes[this.theme],
+      el: this.container
     });
 
-    this.pickr.on('init', (...args) => {
-      this.init.emit(args[0]);
-    }).on('save', (...args) => {
-      this.save.emit(args[0]);
-    }).on('change', (...args) => {
-      this.change.emit(args[0]);
-    }).on('swatchselect', (...args) => {
-      this.swatchSelect.emit(args[0]);
+    this.pickr.on('init', instance => {
+      this.init.emit(instance);
+    }).on('hide', instance => {
+      this.hide.emit(instance);
+    }).on('show', (instance) => {
+      this.show.emit(instance);
+    }).on('save', (color, instance) => {
+      this.save.emit(color);
+    }).on('clear', instance => {
+      this.clear.emit(instance);
+    }).on('change', (color, instance) => {
+      this.change.emit(color);
+    }).on('changestop', instance => {
+      this.changeStop.emit(instance);
+    }).on('cancel', instance => {
+      this.cancel.emit(instance);
+    }).on('swatchselect', (color, instance) => {
+      this.swatchSelect.emit(color);
     });
   }
 }

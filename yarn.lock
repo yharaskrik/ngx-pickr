@@ -696,7 +696,7 @@
     lodash "^4.17.4"
     read-pkg-up "^7.0.0"
 
-"@simonwep/pickr@^1.0.0-beta":
+"@simonwep/pickr@^1.4.7":
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/@simonwep/pickr/-/pickr-1.4.7.tgz#c65d51b8a7597011eed5ddcb072e3bc4f7e47ba4"
   integrity sha512-dnx46+3KiZJ5YNXoWDdaOPLZGPCOFsFsa5uT3Eg+lYCUw8yZ+UxOGG9kEbUX+HgM35bJvAnOfq0l1qEr3CLVzw==
@@ -8531,6 +8531,13 @@ ng-packagr@^5.1.0:
     stylus "^0.54.5"
     terser "^4.1.2"
     update-notifier "^3.0.0"
+
+ngx-pickr@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ngx-pickr/-/ngx-pickr-0.0.2.tgz#b1cb474eae316487e67048381521cc7ec9f0982e"
+  integrity sha512-UOvLuS6Y5WVVy87oUXitI0LmEzn/9SszGggP2yJ6dtVcfb3A/X3zBobB5+edPov58UfmsDTj5cXdDrwEnx1IGg==
+  dependencies:
+    tslib "^1.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"

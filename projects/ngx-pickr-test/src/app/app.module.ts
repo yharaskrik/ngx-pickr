@@ -1,7 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {NgxPickrModule} from 'ngx-pickr';
 
 @NgModule({
@@ -17,4 +17,5 @@ import {NgxPickrModule} from 'ngx-pickr';
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+}
