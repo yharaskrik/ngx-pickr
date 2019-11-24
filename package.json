@@ -1,16 +1,16 @@
 {
-  "name": "ngx-pickr",
-  "version": "0.0.2",
-  "license": "MIT",
-  "description": "Angular Wrapper for the color picker package, Pickr.",
-  "homepage": "https://github.com/yharaskrik/ngx-pickr",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yharaskrik/ngx-pickr"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
+    "name": "ngx-pickr",
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Angular Wrapper for the color picker package, Pickr.",
+    "homepage": "https://github.com/yharaskrik/ngx-pickr",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yharaskrik/ngx-pickr"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
   "author": {
     "name": "Jay Bell",
     "email": "jay@trellis.org"
