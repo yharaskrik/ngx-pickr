@@ -3304,6 +3304,11 @@ builtins@^1.0.3:
   resolved "https://registry.yarnpkg.com/builtins/-/builtins-1.0.3.tgz#cb94faeb61c8696451db36534e1422f94f0aee88"
   integrity sha1-y5T662HIaWRR2zZTThQi+U8K7og=
 
+bump@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/bump/-/bump-0.2.5.tgz#16d5567b75e77ea6597a805c10294c578495b47b"
+  integrity sha1-FtVWe3XnfqZZeoBcEClMV4SVtHs=
+
 byline@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/byline/-/byline-5.0.0.tgz#741c5216468eadc457b03410118ad77de8c1ddb1"

@@ -99,6 +99,7 @@
         "ts-node": "~8.5.2",
         "tsickle": "^0.37.1",
         "tslint": "~5.20.1",
+        "bump": "^0.2.5",
         "tslint-config-prettier": "^1.18.0",
         "typescript": "3.5.3"
     }
