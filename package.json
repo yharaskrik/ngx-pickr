@@ -19,7 +19,7 @@
         "ng": "ng",
         "start": "ng serve --project=ngx-pickr-test",
         "build": "ng build",
-        "test": "ng test",
+        "test": "ng test ngx-pickr",
         "lint": "ng lint",
         "e2e": "ng e2e",
         "build_lib": "ng build ngx-pickr",

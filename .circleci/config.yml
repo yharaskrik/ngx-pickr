@@ -34,6 +34,6 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn build_ci
-      -   run: ng test ngx-pickr
+      - run: yarn test
       - run: yarn compodoc
       - run: yarn firebase-deploy --token=$FIREBASE_TOKEN
