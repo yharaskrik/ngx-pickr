@@ -1,0 +1,16 @@
+{
+    "npmScope": "yharaskrik",
+    "implicitDependencies": {},
+    "projects": {
+        "ngx-pickr": {
+            "tags": [
+                "package"
+            ]
+        },
+        "ngx-pickr-test": {
+            "tags": [
+                "demo"
+            ]
+        }
+    }
+}

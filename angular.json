@@ -1,155 +1,151 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "ngx-pickr": {
-      "projectType": "library",
-      "root": "projects/ngx-pickr",
-      "sourceRoot": "projects/ngx-pickr/src",
-      "prefix": "ngx",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ngx-pickr/tsconfig.lib.json",
-            "project": "projects/ngx-pickr/ng-package.json"
-          }
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "ngx-pickr": {
+            "projectType": "library",
+            "root": "apps/ngx-pickr",
+            "sourceRoot": "apps/ngx-pickr/src",
+            "prefix": "ngx",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "apps/ngx-pickr/tsconfig.lib.json",
+                        "project": "apps/ngx-pickr/ng-package.json"
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "options": {
+                        "jestConfig": "apps/ngx-pickr/jest.config.js",
+                        "tsConfig": "apps/ngx-pickr/tsconfig.spec.json",
+                        "setupFile": "apps/ngx-pickr/src/test-setup.ts"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "apps/ngx-pickr/tsconfig.lib.json",
+                            "apps/ngx-pickr/tsconfig.spec.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                }
+            }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-pickr/src/test.ts",
-            "tsConfig": "projects/ngx-pickr/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-pickr/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-pickr/tsconfig.lib.json",
-              "projects/ngx-pickr/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
+        "ngx-pickr-test": {
+            "projectType": "application",
+            "schematics": {},
+            "root": "apps/ngx-pickr-test",
+            "sourceRoot": "apps/ngx-pickr-test/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/ngx-pickr-test",
+                        "index": "apps/ngx-pickr-test/src/index.html",
+                        "main": "apps/ngx-pickr-test/src/main.ts",
+                        "polyfills": "apps/ngx-pickr-test/src/polyfills.ts",
+                        "tsConfig": "apps/ngx-pickr-test/tsconfig.app.json",
+                        "aot": false,
+                        "assets": [
+                            "apps/ngx-pickr-test/src/favicon.ico",
+                            "apps/ngx-pickr-test/src/assets"
+                        ],
+                        "styles": [
+                            "apps/ngx-pickr-test/src/styles.css"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "apps/ngx-pickr-test/src/environments/environment.ts",
+                                    "with": "apps/ngx-pickr-test/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "aot": true,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "ngx-pickr-test:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "ngx-pickr-test:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "ngx-pickr-test:build"
+                    }
+                },
+                "test": {
+                    "builder": "@nrwl/jest:jest",
+                    "options": {
+                        "jestConfig": "apps/ngx-pickr-test/jest.config.js",
+                        "tsConfig": "apps/ngx-pickr-test/tsconfig.spec.json",
+                        "setupFile": "apps/ngx-pickr-test/src/test-setup.ts"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "apps/ngx-pickr-test/tsconfig.app.json",
+                            "apps/ngx-pickr-test/tsconfig.spec.json",
+                            "apps/ngx-pickr-test/e2e/tsconfig.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                },
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular:protractor",
+                    "options": {
+                        "protractorConfig": "apps/ngx-pickr-test/e2e/protractor.conf.js",
+                        "devServerTarget": "ngx-pickr-test:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "ngx-pickr-test:serve:production"
+                        }
+                    }
+                }
+            }
         }
-      }
     },
-    "ngx-pickr-test": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "projects/ngx-pickr-test",
-      "sourceRoot": "projects/ngx-pickr-test/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/ngx-pickr-test",
-            "index": "projects/ngx-pickr-test/src/index.html",
-            "main": "projects/ngx-pickr-test/src/main.ts",
-            "polyfills": "projects/ngx-pickr-test/src/polyfills.ts",
-            "tsConfig": "projects/ngx-pickr-test/tsconfig.app.json",
-            "aot": false,
-            "assets": [
-              "projects/ngx-pickr-test/src/favicon.ico",
-              "projects/ngx-pickr-test/src/assets"
-            ],
-            "styles": [
-              "projects/ngx-pickr-test/src/styles.css"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/ngx-pickr-test/src/environments/environment.ts",
-                  "with": "projects/ngx-pickr-test/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "ngx-pickr-test:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ngx-pickr-test:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ngx-pickr-test:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-pickr-test/src/test.ts",
-            "polyfills": "projects/ngx-pickr-test/src/polyfills.ts",
-            "tsConfig": "projects/ngx-pickr-test/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-pickr-test/karma.conf.js",
-            "assets": [
-              "projects/ngx-pickr-test/src/favicon.ico",
-              "projects/ngx-pickr-test/src/assets"
-            ],
-            "styles": [
-              "projects/ngx-pickr-test/src/styles.css"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-pickr-test/tsconfig.app.json",
-              "projects/ngx-pickr-test/tsconfig.spec.json",
-              "projects/ngx-pickr-test/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ngx-pickr-test/e2e/protractor.conf.js",
-            "devServerTarget": "ngx-pickr-test:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ngx-pickr-test:serve:production"
-            }
-          }
-        }
-      }
-    }},
-  "defaultProject": "ngx-pickr"
+    "defaultProject": "ngx-pickr",
+    "cli": {
+        "defaultCollection": "@nrwl/angular",
+        "packageManager": "yarn"
+    }
 }
