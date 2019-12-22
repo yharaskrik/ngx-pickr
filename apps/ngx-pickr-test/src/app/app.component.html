@@ -1,1 +1,7 @@
-<div class="pickrSquare pickr-container" ngxPickr theme="nano"></div>
+<form [formGroup]="form">
+    <div class="pickrSquare pickr-container" ngxPickr (change)="change($event)" theme="nano"
+         formControlName="color"></div>
+    <div>
+        HSL Value of form:  {{formColor(form.get('color').value)}}
+    </div>
+</form>
