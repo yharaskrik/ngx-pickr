@@ -64,15 +64,15 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.803.19",
+    "@angular-devkit/build-angular": "15.0.4",
     "@angular-devkit/build-ng-packagr": "0.803.19",
     "@angular/cli": "8.3.19",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
     "@compodoc/compodoc": "^1.1.9",
     "@ngneat/spectator": "^4.6.0",
-    "@nrwl/angular": "^8.8.2",
-    "@nrwl/cypress": "^8.8.2",
+    "@nrwl/angular": "^15.4.2",
+    "@nrwl/cypress": "^15.4.2",
     "@nrwl/jest": "^8.8.2",
     "@nrwl/workspace": "^8.8.2",
     "@types/jasmine": "~3.5.0",
